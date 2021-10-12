@@ -12,7 +12,10 @@ class UserWidget {
    * необходимо выкинуть ошибку.
    * */
   constructor(element){
-
+    this.element = element;
+    if(!this.element) {
+      throw new Error('Ошибка. element не имеет значения! UserWidget')
+    }
   }
 
   /**
@@ -23,6 +26,7 @@ class UserWidget {
    * авторизованного пользователя
    * */
   update(){
-
+    let userCurrent = User.current();
+    (this.element).querySelector('.user-name').textContent = userCurrent.name + '! - привет!!';
   }
 }
