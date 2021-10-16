@@ -11,14 +11,19 @@ class TransactionsPage {
    * через registerEvents()
    * */
   constructor( element ) {
-
+    this.element = element;
+    if(!this.element) {
+      throw new Error('Ошибка. element не имеет значения! TransactionsPage');
+    }
+    this.lastOptions;
+    this.registerEvents();
   }
 
   /**
    * Вызывает метод render для отрисовки страницы
    * */
   update() {
-
+    this.render();
   }
 
   /**
@@ -28,7 +33,12 @@ class TransactionsPage {
    * TransactionsPage.removeAccount соответственно
    * */
   registerEvents() {
-
+    this.element.querySelector('.remove-account').addEventListener('click', () => this.removeAccount());
+    let elRemove = this.element.querySelector('.transaction__remove');
+    if(elRemove) {
+      elRemove.addEventListener('click', () => this.removeTransaction(elRemove.dataset.id));
+    }
+    
   }
 
   /**
@@ -41,7 +51,17 @@ class TransactionsPage {
    * для обновления приложения
    * */
   removeAccount() {
-
+    if(!this.lastOptions) {return;}
+    let result = confirm('Вы точно хотите удалить этот счет??')
+    if(result) { console.log(this.lastOptions.account_id);
+      const data = this.lastOptions.account_id;
+      Account.remove(data, (err, response) => {
+        if(response.success) {
+          App.updateWidgets();
+        } else {console.log(response.err + err);}
+      });
+      this.clear();
+    } else {return;}
   }
 
   /**
@@ -61,6 +81,19 @@ class TransactionsPage {
    * в TransactionsPage.renderTransactions()
    * */
   render(options){
+    if(!options) {return;}             
+    this.lastOptions = options;  console.log(this.lastOptions);
+    Account.get(options.account_id, (err, response) => {
+      if(response.success) {
+        this.renderTitle(response.data.name);
+      } else {console.log(response.err + err);}
+    });
+    const data = {account_id: options.account_id}
+    Transaction.list(data, (err, response) => {
+      if(response.success) {           console.log(response);
+        this.renderTransactions();
+      } else {console.log(response.err + err);}
+    })
 
   }
 
@@ -70,14 +103,14 @@ class TransactionsPage {
    * Устанавливает заголовок: «Название счёта»
    * */
   clear() {
-
+    document.querySelector('.content-title').textContent = 'Название счета';
   }
 
   /**
    * Устанавливает заголовок в элемент .content-title
    * */
   renderTitle(name){
-
+    document.querySelector('.content-title').textContent = name;
   }
 
   /**

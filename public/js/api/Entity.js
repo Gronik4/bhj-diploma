@@ -11,7 +11,7 @@ class Entity {
    * Это могут быть счета или доходы/расходы
    * (в зависимости от того, что наследуется от Entity)
    * */
-  static list(data, callback){
+  static list(data, callback){ console.log(data);
     createRequest({
       method: 'GET',
       url: this.url,
@@ -54,16 +54,22 @@ class Entity {
    * (в зависимости от того, что наследуется от Entity)
    * */
   static remove(data, callback ) {
-    options.method = 'DELET';
-    options.url = this.url;
-    options.data = data;
-    createRequest(options = {});
-    callback(err, response); {
-      if(err) {
-        console.log('Ошибка= ' + err);
-      } else {
-        console.log('Ответ= ' + response);
-      }
-    }
+    createRequest({
+      method: 'DELET',
+      url: this.url + '/' + data,
+      //id: data,
+      data: data,
+      callback: (err, response) => {
+        if(err) {
+          console.log('Ошибка= ' + err);
+        } else {
+          console.log('Ответ= ' + response);
+        }
+        callback(err, response);
+      } 
+    });
+    
+    
+    
   }
 }
