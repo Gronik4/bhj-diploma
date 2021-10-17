@@ -38,14 +38,7 @@ class Entity {
       method: 'PUT',
       url: this.url,
       data: data,
-      callback: (err, response) => {
-        if(err) {
-          console.log('Ошибка= ' + err);
-        } else {
-          console.log('Ответ= ' + response);
-        }
-        callback(err, response);
-      }
+      callback: callback
     });
   }
 
@@ -55,18 +48,10 @@ class Entity {
    * */
   static remove(data, callback ) {
     createRequest({
-      method: 'DELET',
-      url: this.url + '/' + data,
-      //id: data,
-      data: data,
-      callback: (err, response) => {
-        if(err) {
-          console.log('Ошибка= ' + err);
-        } else {
-          console.log('Ответ= ' + response);
-        }
-        callback(err, response);
-      } 
+      method: 'DELETE',
+      url: this.url ,
+      data,
+      callback: callback
     });
     
     

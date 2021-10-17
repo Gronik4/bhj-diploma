@@ -34,15 +34,9 @@ const createRequest = (options = {}) => {
         }
     } else {
         const formData = new FormData();                    console.log(options);
-       /* for(let item in options.data) {
-            let name = `${item}`;
-            formData.append(name + `, ` + options.data[item]);
-        }*/
-        formData.append('email', `${options.data.email}`);
-        formData.append('password', `${options.data.password}`);
-        formData.append('name', `${options.data.name}`);
-        formData.append('user_id', `${options.data.user_id}`);
-        formData.append('id', `${options.data.id}`);
+        for(let item in options.data) {
+            formData.append(item, options.data[item]);
+        }
 
         try{
             xhr.open(options.method, options.url);

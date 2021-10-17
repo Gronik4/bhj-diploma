@@ -40,21 +40,6 @@
       "id": "cbt6wf6zskumiss19"
     },
     {
-      "name": "Долг",
-      "user_id": "cbt6wf56wkul8qks5",
-      "id": "cbt6wf600kumityzi"
-    },
-    {
-      "name": "Накопим",
-      "user_id": "cbt6wf56wkul8qks5",
-      "id": "cbt6wf93ckumolg1t"
-    },
-    {
-      "name": "Проверка",
-      "user_id": "cbt6wf56wkul8qks5",
-      "id": "cbt6wf5a0kuqs1xah"
-    },
-    {
       "name": "Пример1",
       "user_id": "1",
       "id": "cbt6wf5sckutp87ii"
@@ -70,9 +55,9 @@
       "id": "cbt6wf3sckutp8mvg"
     },
     {
-      "name": "sdsfdf",
+      "name": "Накопим",
       "user_id": "cbt6wf56wkul8qks5",
-      "id": "cbt6wf8q4kutvom6o"
+      "id": "cbt6wf2mskuuyzw49"
     }
   ],
   "transactions": [
@@ -210,6 +195,60 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "cbt6wf6vckuuz1na3",
+      "type": "income",
+      "name": "Зарплата",
+      "sum": 20000,
+      "account_id": "cbt6wf494kumi739y",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-17T08:33:20.666Z"
+    },
+    {
+      "id": "cbt6wf11kkuuz69w7",
+      "type": "income",
+      "name": "заначка",
+      "sum": 5000,
+      "account_id": "cbt6wf6zskumiss19",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-17T08:36:56.598Z"
+    },
+    {
+      "id": "cbt6wf6bokuv02zad",
+      "type": "expense",
+      "name": "квартплата",
+      "sum": 7000,
+      "account_id": "cbt6wf494kumi739y",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-17T09:02:22.500Z"
+    },
+    {
+      "id": "cbt6wfgwkuv0f9n7",
+      "type": "expense",
+      "name": "шаурма",
+      "sum": 1300,
+      "account_id": "cbt6wf494kumi739y",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-17T09:11:55.794Z"
+    },
+    {
+      "id": "cbt6wf6qokuv0icqw",
+      "type": "income",
+      "name": "Подработка",
+      "sum": 6000,
+      "account_id": "cbt6wf2mskuuyzw49",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-17T09:14:19.783Z"
+    },
+    {
+      "id": "cbt6wf7rskuv0j1wd",
+      "type": "income",
+      "name": "Премия",
+      "sum": 5000,
+      "account_id": "cbt6wf494kumi739y",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-17T09:14:52.380Z"
     }
   ]
 }

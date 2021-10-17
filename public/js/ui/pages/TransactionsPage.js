@@ -54,9 +54,9 @@ class TransactionsPage {
     if(!this.lastOptions) {return;}
     let result = confirm('Вы точно хотите удалить этот счет??')
     if(result) { console.log(this.lastOptions.account_id);
-      const data = this.lastOptions.account_id;
+      const data = {id: this.lastOptions.account_id};
       Account.remove(data, (err, response) => {
-        if(response.success) {
+        if(response.success) {    console.log(response.success);
           App.updateWidgets();
         } else {console.log(response.err + err);}
       });

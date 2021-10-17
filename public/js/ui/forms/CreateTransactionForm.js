@@ -19,7 +19,8 @@ class CreateTransactionForm extends AsyncForm {
    * */
   renderAccountsList() {
     let data = User.current();
-    let placeOutput = this.element.querySelector('.accounts-select'); 
+    let placeOutput = this.element.querySelector('.accounts-select');
+    placeOutput.querySelectorAll('option').forEach(item => {item.remove();})  
     function updateSelect(err, response) {
       if(response) {
         response.data.forEach(item => {
