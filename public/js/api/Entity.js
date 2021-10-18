@@ -11,19 +11,12 @@ class Entity {
    * Это могут быть счета или доходы/расходы
    * (в зависимости от того, что наследуется от Entity)
    * */
-  static list(data, callback){ console.log(data);
+  static list(data, callback){
     createRequest({
       method: 'GET',
       url: this.url,
       data: data,
-      callback: (err, response) => {
-        if(err) {
-          console.log('Ошибка= ' + err);
-        } else {
-          console.log('Ответ= ' + response);
-        }
-        callback(err, response);
-      }
+      callback: callback
     });
     
   }

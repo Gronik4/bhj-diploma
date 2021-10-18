@@ -13,14 +13,7 @@ class Account extends Entity {
       url: this.url + '/' + id, 
       data: id,
       method: 'GET',
-      callback: (err, response) => {
-        if(err) {
-          console.log('Ошибка= ' + err);
-        } else {
-          console.log('Ответ= ' + response);
-        }
-        callback(err, response);
-      }
+      callback: callback
     });
     
     

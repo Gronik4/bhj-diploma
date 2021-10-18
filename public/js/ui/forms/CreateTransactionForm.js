@@ -9,7 +9,6 @@ class CreateTransactionForm extends AsyncForm {
    * */
   constructor(element) {
     super(element);
-    //console.log('renderAccountsList из класса');
     this.renderAccountsList();
   }
 

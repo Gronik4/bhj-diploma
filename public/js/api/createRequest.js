@@ -1,22 +1,6 @@
 /**
  * Основная функция для совершения запросов на сервер * 
 **/
-let options = {
-    url: '',
-    data: {
-        email: '',
-        password: '',
-        name: ''
-    },
-    method: '',
-    callback: (err, response) =>{
-        if(err) {
-            console.log('Ошибка= ' + err);
-        } else {
-            console.log('Ответ= ' + response);
-        }
-    },
-}
 const createRequest = (options = {}) => {               
     if(options.data && options.data.addUrl) options.url += options.data.addUrl;
     const xhr = new XMLHttpRequest();
@@ -33,7 +17,7 @@ const createRequest = (options = {}) => {
             options.callback(new Error(e.messange), null);
         }
     } else {
-        const formData = new FormData();                    console.log(options);
+        const formData = new FormData();
         for(let item in options.data) {
             formData.append(item, options.data[item]);
         }

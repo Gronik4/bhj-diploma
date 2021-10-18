@@ -40,24 +40,14 @@
       "id": "cbt6wf6zskumiss19"
     },
     {
-      "name": "Пример1",
-      "user_id": "1",
-      "id": "cbt6wf5sckutp87ii"
-    },
-    {
-      "name": "пример2",
-      "user_id": "1",
-      "id": "cbt6wf20kkutp8g4y"
-    },
-    {
-      "name": "Пример3",
-      "user_id": "1",
-      "id": "cbt6wf3sckutp8mvg"
-    },
-    {
       "name": "Накопим",
       "user_id": "cbt6wf56wkul8qks5",
       "id": "cbt6wf2mskuuyzw49"
+    },
+    {
+      "name": "Отладка",
+      "user_id": "cbt6wf56wkul8qks5",
+      "id": "cbt6wf83ckuwki28y"
     }
   ],
   "transactions": [
@@ -224,15 +214,6 @@
       "created_at": "2021-10-17T09:02:22.500Z"
     },
     {
-      "id": "cbt6wfgwkuv0f9n7",
-      "type": "expense",
-      "name": "шаурма",
-      "sum": 1300,
-      "account_id": "cbt6wf494kumi739y",
-      "user_id": "cbt6wf56wkul8qks5",
-      "created_at": "2021-10-17T09:11:55.794Z"
-    },
-    {
       "id": "cbt6wf6qokuv0icqw",
       "type": "income",
       "name": "Подработка",
@@ -249,6 +230,69 @@
       "account_id": "cbt6wf494kumi739y",
       "user_id": "cbt6wf56wkul8qks5",
       "created_at": "2021-10-17T09:14:52.380Z"
+    },
+    {
+      "id": "cbt6wf5wkuvc4rkr",
+      "type": "expense",
+      "name": "fjddjjk",
+      "sum": 50,
+      "account_id": "cbt6wf2mskuuyzw49",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-17T14:39:41.210Z"
+    },
+    {
+      "id": "cbt6wf94okuveaf3k",
+      "type": "income",
+      "name": "подработка",
+      "sum": 12000,
+      "account_id": "cbt6wf2mskuuyzw49",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-17T15:40:04.208Z"
+    },
+    {
+      "id": "cbt6wf57wkuwkidwi",
+      "type": "income",
+      "name": "Отладка-доход",
+      "sum": 12000,
+      "account_id": "cbt6wf83ckuwki28y",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-18T11:21:59.777Z"
+    },
+    {
+      "id": "cbt6wf11gkuwkj5op",
+      "type": "expense",
+      "name": "Отладка-расход1",
+      "sum": 130,
+      "account_id": "cbt6wf83ckuwki28y",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-18T11:22:35.784Z"
+    },
+    {
+      "id": "cbt6wf63ckuwkjn6f",
+      "type": "expense",
+      "name": "Отладка-расход2",
+      "sum": 140,
+      "account_id": "cbt6wf83ckuwki28y",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-18T11:22:58.454Z"
+    },
+    {
+      "id": "cbt6wf4d4kuwkk66g",
+      "type": "expense",
+      "name": "Отладка-расход3",
+      "sum": 150,
+      "account_id": "cbt6wf83ckuwki28y",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-18T11:23:23.079Z"
+    },
+    {
+      "id": "cbt6wf5vwkuwknkt2",
+      "type": "income",
+      "name": "Отладка-доход1",
+      "sum": 1100,
+      "account_id": "cbt6wf83ckuwki28y",
+      "user_id": "cbt6wf56wkul8qks5",
+      "created_at": "2021-10-18T11:26:02.005Z"
     }
   ]
 }
